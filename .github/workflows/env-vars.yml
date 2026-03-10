@@ -11,18 +11,18 @@ env:
 jobs:
   env-vars:
     env:
-      environments: staing   
+      ENVIRONMENT: staing   
     runs-on: ubuntu-latest
     steps:
       - name: print all env
         env:
-          version: 1.0.0
+          VERSION: 1.0.0
         run: |
           echo "workflow level env: $APP_NAME"
-          echo "job level env: $environments"
-          echo "steps level env: $version"
+          echo "job level env: $ENVIRONMENT"
+          echo "steps level env: $VERSION"
           echo "commit SHA: "${{ github.sha }}"
           echo Actor: "{{ gitbub.actor }}"
-          
+
 
 
