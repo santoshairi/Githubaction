@@ -3,6 +3,7 @@ name: Job Output Task
 on:
   push:
     branches: [main]
+  workflow_dispatch:  
 
 jobs:
   get-date:
