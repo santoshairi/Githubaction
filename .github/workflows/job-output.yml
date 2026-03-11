@@ -1,4 +1,4 @@
-neame: Job Output Task
+name: Job Output Task
 
 on:
   push:
