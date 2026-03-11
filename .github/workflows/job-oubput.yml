@@ -1,0 +1,23 @@
+neame: Job Output Task
+
+on:
+  push:
+    branches:
+      - main
+
+
+jobs:
+  producer:
+    runs-on:
+
+    outputs:
+      build-date: ${{ steps.set-date.outputs.date }}
+      build-id: $ {{ steps.set-id.outputs.build_it}}  
+  steps:
+    - name: set today's date as putput 
+      id: set-date
+      run: |
+        TODAY=$(date -u +"%y-%m-%d")
+        echo "date=$TODAY" >> $GITHUB_OUTPUT
+        echo "Date captured: $TODAY"
+                  
