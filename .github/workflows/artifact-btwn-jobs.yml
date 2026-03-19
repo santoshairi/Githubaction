@@ -26,4 +26,4 @@ jobs:
           name: job1 file
 
       - name: print
-        run: cat job1.txtt    
+        run: cat job1.txt 
